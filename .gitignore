@@ -4,6 +4,10 @@ archive.zip
 # ingore Wikipedia web scrape JSON file
 wikipedia-movies.json
 
+# ignore Kaggle csv file downloads
+movies_metadata.csv
+ratings.csv
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
