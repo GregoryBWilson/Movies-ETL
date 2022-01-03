@@ -1,3 +1,9 @@
+# ignore Kaggle Download ZIP File
+archive.zip
+
+# ingore Wikipedia web scrape JSON file
+wikipedia-movies.json
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
