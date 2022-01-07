@@ -1,3 +1,6 @@
+# ignore to protect postgres password
+config.py
+
 # ignore Kaggle Download ZIP File
 archive.zip
 
