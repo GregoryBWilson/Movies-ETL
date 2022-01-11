@@ -27,13 +27,13 @@ Reading in the raw Wikipedia JSON,  wikipedia.movies.json file we are able to co
 
 A movies_metadata.csv file, from Kaggle, was read in to construct the kaggle_metadata dataframe shown in figure 2 below.
 
-![This is a VS screenshot of the schema.sql code](C:/Users/Greg/Carleton/Movies-ETL/Resources/2_ETL_function_test_kaggle_metadata_df_DataFrame.png "Figure 2  - Kaggle Metadata DataFrame")
+![/Resources/2_ETL_function_test_kaggle_metadata_df_DataFrame.png](C:/Users/Greg/Carleton/Movies-ETL/Resources/2_ETL_function_test_kaggle_metadata_df_DataFrame.png "Figure 2  - Kaggle Metadata DataFrame")
 
 ***Figure 2  - Kaggle Metadata DataFrame***
 
 A huge csv file of more than 26 million movie rates where read in to create the dataframe of ratings shown in figure 3.
 
-![This is a VS screenshot of the schema.sql code](C:/Users/Greg/Carleton/Movies-ETL/Resources/3_ETL_function_test_ratings_DataFrame.png "Figure 3  - Ratings DataFrame")
+![/Resources/3_ETL_function_test_ratings_DataFrame.png](C:/Users/Greg/Carleton/Movies-ETL/Resources/3_ETL_function_test_ratings_DataFrame.png "Figure 3  - Ratings DataFrame")
 
 ***Figure 3  - Ratings DataFrame***
 
@@ -41,13 +41,13 @@ A huge csv file of more than 26 million movie rates where read in to create the 
 
 This part of the ETL process is truly the heavy lifting.  This is the part where the data is analyzed in detail to determine appropriate patterns that can be used to extract and transform the data.  The objective is to take the best possible data from the most relevant sources and combine it into a simple entity that will be of use.  I truth, if done correctly, the whole is worth more than the sum of the parts.  Wikipedia data is particularly difficult to manage as it is built by a number of different contributors.  Figure 4 below shows the results of the cleaned wiki data.
 
-![This is a VS screenshot of the schema.sql code](C:/Users/Greg/Carleton/Movies-ETL/Resources/4_ETL_clean_wiki_movies_wiki_movies_Dataframe.png "Figure 4  - Clean Wiki Movies DataFrame")
+![4_ETL_clean_wiki_movies_wiki_movies_Dataframe.png](C:/Users/Greg/Carleton/Movies-ETL/Resources/4_ETL_clean_wiki_movies_wiki_movies_Dataframe.png "Figure 4  - Clean Wiki Movies DataFrame")
 
 ***Figure 4  - Clean Wiki Movies DataFrame***
 
 Wiki data also includes a large number of columns, the useful and well populated ones where kept and are listed in figure 5 below.
 
-![This is a VS screenshot of the schema.sql code](C:/Users/Greg/Carleton/Movies-ETL/Resources/5_ETL_clean_wiki_movies_wiki_movies_column_list.png "Figure 5  - Wiki Movies Column List")
+![5_ETL_clean_wiki_movies_wiki_movies_column_list.png](C:/Users/Greg/Carleton/Movies-ETL/Resources/5_ETL_clean_wiki_movies_wiki_movies_column_list.png "Figure 5  - Wiki Movies Column List")
 
 ***Figure 5  - Wiki Movies Column List***
 
@@ -55,13 +55,13 @@ Wiki data also includes a large number of columns, the useful and well populated
 
 Kaggle data is somewhat more structured, however, it does need to be matched up with available data from Wikipedia.  This information is show in figures 6 and 7 below.
 
-![This is a VS screenshot of the schema.sql code](C:/Users/Greg/Carleton/Movies-ETL/Resources/6_ETL_clean_kaggle_data_movies_with_ratings_df_DataFrame.png "Figure 6  - Clean Kaggle Data with Ratings DataFrame")
+![/Resources/6_ETL_clean_kaggle_data_movies_with_ratings_df_DataFrame.png](C:/Users/Greg/Carleton/Movies-ETL/Resources/6_ETL_clean_kaggle_data_movies_with_ratings_df_DataFrame.png "Figure 6  - Clean Kaggle Data with Ratings DataFrame")
 
 ***Figure 6  - Clean Kaggle Data with Ratings DataFrame***
 
 
 
-![This is a VS screenshot of the schema.sql code](C:/Users/Greg/Carleton/Movies-ETL/Resources/7_ETL_clean_kaggle_data_movies_df_DataFrame.png "Figure 7  - Clean Kaggle Data Movies DataFrame")
+![/Resources/7_ETL_clean_kaggle_data_movies_df_DataFrame.png](C:/Users/Greg/Carleton/Movies-ETL/Resources/7_ETL_clean_kaggle_data_movies_df_DataFrame.png "Figure 7  - Clean Kaggle Data Movies DataFrame")
 
 ***Figure 7  - Clean Kaggle Data Movies DataFrame***
 
@@ -69,25 +69,25 @@ Kaggle data is somewhat more structured, however, it does need to be matched up 
 
 The final product is then loaded into a Postgres database.  For this section I will be reviewing  both the pre and post refactoring results.  In figure 8 we can see that the original cleaning work that was done on the data resulted in a file containing 6051 movies as shown in figure 8 below.  This is one less than the 6052, and I suspect that that is due to the manual rejection of one outlier movie.
 
-![This is a VS screenshot of the schema.sql code](C:/Users/Greg/Carleton/Movies-ETL/Resources/movies_query_original.png "Figure 8 - Movies Query from Manual Process")
+![/Resources/movies_query_original.png](C:/Users/Greg/Carleton/Movies-ETL/Resources/movies_query_original.png "Figure 8 - Movies Query from Manual Process")
 
 ***Figure 8 - Movies Query from Manual Process***
 
 In figure 9 you can see that the refactored and automated cleaning produce a list of 6075.  It can be expected that full automation would not clean to the same degree, but it is pretty good.  Later I will discuss observations that may improve this outcome.
 
-![This is a VS screenshot of the schema.sql code](C:/Users/Greg/Carleton/Movies-ETL/Resources/movies_query.png "Figure 9  - Movies Query from Automation")
+![/Resources/movies_query.png](C:/Users/Greg/Carleton/Movies-ETL/Resources/movies_query.png "Figure 9  - Movies Query from Automation")
 
 Figure 9  - Movies Query from Automation
 
 Being much more structure you can see that the cleaning of ratings data for the original manual process, figure 10 and the automated process figure 11 resulted in the same 26, 024, 289 results.
 
-![This is a VS screenshot of the schema.sql code](C:/Users/Greg/Carleton/Movies-ETL/Resources/ratings_query_original.png "Figure 10  - Ratings Query from Manual Process")
+![/Resources/ratings_query_original.png](C:/Users/Greg/Carleton/Movies-ETL/Resources/ratings_query_original.png "Figure 10  - Ratings Query from Manual Process")
 
 ***Figure 10  - Ratings Query from Manual Process***
 
 
 
-![This is a VS screenshot of the schema.sql code](C:/Users/Greg/Carleton/Movies-ETL/Resources/ratings_query.png "Figure 11  - Ratings Query from Automation")
+![/Resources/ratings_query.png](C:/Users/Greg/Carleton/Movies-ETL/Resources/ratings_query.png "Figure 11  - Ratings Query from Automation")
 
 ***Figure 11  - Ratings Query from Automation***
 
@@ -127,7 +127,7 @@ The use of plots to conduct reasonability checks on ratings data, as shown in fi
 
 
 
-<img src="C:/Users/Greg/Carleton/Movies-ETL/Resources/Outliner_Movie.png" alt="This is a VS screenshot of the schema.sql code" title="Figure 12  - Identification of Outliers" style="zoom:150%;" />
+<img src="C:/Users/Greg/Carleton/Movies-ETL/Resources/Outliner_Movie.png" alt="/Resources/Outliner_Movie.png" title="Figure 12  - Identification of Outliers" style="zoom:150%;" />
 
 ***Figure 12  - Identification of Outliers***
 
