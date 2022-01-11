@@ -2,7 +2,7 @@
 
 ## 1 Propose
 
-Britta, who works for Amazing Prime, a large online movie provider wants to run a hackathon but doesn't want to use proprietary data in the process.  We have helped her develop a clean data set, from publicly available sources ,and have spent a great deal of time cleaning that data in preparation for the hackathon.  Britta like the outcome of our original work so much that she now wants to automate the process.  This project involved a scripted (I will explain this late), refactoring of the code developed through the earlier process to achieve automation.  As you are likely well aware, full automation of the Extract, Transform, Load (ETL) process would normally require the addition of at least some level of artificial intelligence, you will see that the results nevertheless are quite good. 
+Britta, who works for Amazing Prime, a large online movie provider wants to run a hackathon but doesn't want to use proprietary data in the process.  We have helped her develop a clean data set, from publicly available sources, and have spent a great deal of time cleaning that data in preparation for the hackathon.  Britta liked the outcome of our original work so much that she now wants to automate the process.  This project involved a scripted (I will explain this later), refactoring of the code developed through the earlier process to achieve automation.  As you are likely well aware, full automation of the Extract, Transform, Load (ETL) process would normally require the addition of at least some level of artificial intelligence, you will see that the results nevertheless are quite good. 
 
 ## 2 Deliverables
 
@@ -13,7 +13,7 @@ The original manual ETL process is documented, with markdown notes, in the Jupyt
 - ETL_clean_kaggle_data.ipynb
 - ETL_create_database.ipynb
 
-Sequentially,  these files form the basis of moving information from a raw form to a form that can be used in further analysis or service delivery.  We will now go through the development of these files quickly so that we can get to the part where we discuss the observations and recommendations that will be provided to Britta and Amazing Prime.
+Sequentially, these files form the basis of moving information from a raw form to a form that can be used in further analysis or service delivery.  We will now go through the development of these files quickly so that we can get to the part where we discuss the observations and recommendations that will be provided to Britta and Amazing Prime.
 
 ### 2.1 Write an ETL Function to Read Three Data Files
 
@@ -39,7 +39,7 @@ A huge csv file of more than 26 million movie rates where read in to create the 
 
 ### 2.2 Extract and Transform the Wikipedia Data
 
-This part of the ETL process is truly the heavy lifting.  This is the part where the data is analyzed in detail to determine appropriate patterns that can be used to extract and transform the data.  The objective is to take the best possible data from the most relevant sources and combine it into a simple entity that will be of use.  I truth, if done correctly, the whole is worth more than the sum of the parts.  Wikipedia data is particularly difficult to manage as it is built by a number of different contributors.  Figure 4 below shows the results of the cleaned wiki data.
+This part of the ETL process is truly the heavy lifting.  This is the part where the data is analyzed in detail to determine appropriate patterns that can be used to extract and transform the data.  The objective is to take the best possible data from the most relevant sources and combine it into a simple entity that will be of use.  In truth, if done correctly, the whole is worth more than the sum of the parts.  Wikipedia data is particularly difficult to manage as it is built by a number of different contributors.  Figure 4 below shows the results of the cleaned wiki data.
 
 ![/Resources/4_ETL_clean_wiki_movies_wiki_movies_Dataframe.png](Resources/4_ETL_clean_wiki_movies_wiki_movies_Dataframe.png "Figure 4  - Clean Wiki Movies DataFrame")
 
@@ -79,7 +79,7 @@ In figure 9 you can see that the refactored and automated cleaning produce a lis
 
 Figure 9  - Movies Query from Automation
 
-Being much more structure you can see that the cleaning of ratings data for the original manual process, figure 10 and the automated process figure 11 resulted in the same 26, 024, 289 results.
+Being much more structured you can see that the cleaning of ratings data for the original manual process, figure 10 and the automated process figure 11 resulted in the same 26, 024, 289 results.
 
 ![/Resources/ratings_query_original.png](Resources/ratings_query_original.png "Figure 10  - Ratings Query from Manual Process")
 
@@ -238,6 +238,6 @@ I the next few sections I looked at what, if anything, has been missed from this
 
 I didn't get the 6052 number that was listed as the expected outcome of the refactoring.  I did however identify that of the 6075 that were cleaned I could add to the code to get the number down by 18 i.e. 17 nulls and 1 automated outlier.  In order to resolve the remaining 6 I would need to review the identified rows to see why they remained and either add to or modify the existing code.
 
-I understand that the challenge process had to be scripted, but my recommendation to Britta would be of me to walk through my original code and in order extract code into new function, like the one presented in the challenge, that way each and every step could be verfiy.
+I understand that the challenge process had to be scripted, but my recommendation to Britta would be for me to walk through my original code and in order extract code into new functions, like the one presented in the challenge, that way each and every step could be verfied.
 
-It can be seen in section 3 above that a lot of the data resolution has not been completed in the automation - most of that required manual intervention - however it could be added now if we believe (for example) that the Kaggle data will always be better than Wikipedia.  Bottom-line,  the ETL process is a much needed process that requires a great deal of thought to do correctly and Amazing Prime should protect their investment by making sure they have the right people on thegit stat job.
+It can be seen in section 3 above that a lot of the data resolution has not been completed in the automation - most of that required manual intervention - however, it could be added now if we believe (for example) that the Kaggle data will always be better than Wikipedia.  Bottom-line,  the ETL process is a much needed process that requires a great deal of thought to do correctly and Amazing Prime should protect their investment by making sure they have the right people on the job.
