@@ -21,7 +21,7 @@ While the figures in this report are available in the above referenced Jupyter N
 
 Reading in the raw Wikipedia JSON,  wikipedia.movies.json file we are able to construct the wiki_movies_df dataframe file shown in figure 1.
 
-![This is a VS screenshot of the schema.sql code](C:/Users/Greg/Carleton/Movies-ETL/Resources/1_ETL_function_test_wiki_movies_df_DataFrame.png "Figure 1  - Wiki Movies DataFrame")
+![https://github.com/GregoryBWilson/Movies-ETL/blob/main/Resources/1_ETL_function_test_wiki_movies_df_DataFrame.png](C:/Users/Greg/Carleton/Movies-ETL/Resources/1_ETL_function_test_wiki_movies_df_DataFrame.png "Figure 1  - Wiki Movies DataFrame")
 
 ***Figure 1  - Wiki Movies DataFrame***
 
