@@ -41,13 +41,13 @@ A huge csv file of more than 26 million movie rates where read in to create the 
 
 This part of the ETL process is truly the heavy lifting.  This is the part where the data is analyzed in detail to determine appropriate patterns that can be used to extract and transform the data.  The objective is to take the best possible data from the most relevant sources and combine it into a simple entity that will be of use.  I truth, if done correctly, the whole is worth more than the sum of the parts.  Wikipedia data is particularly difficult to manage as it is built by a number of different contributors.  Figure 4 below shows the results of the cleaned wiki data.
 
-![4_ETL_clean_wiki_movies_wiki_movies_Dataframe.png](C:/Users/Greg/Carleton/Movies-ETL/Resources/4_ETL_clean_wiki_movies_wiki_movies_Dataframe.png "Figure 4  - Clean Wiki Movies DataFrame")
+![/Resources/4_ETL_clean_wiki_movies_wiki_movies_Dataframe.png](C:/Users/Greg/Carleton/Movies-ETL/Resources/4_ETL_clean_wiki_movies_wiki_movies_Dataframe.png "Figure 4  - Clean Wiki Movies DataFrame")
 
 ***Figure 4  - Clean Wiki Movies DataFrame***
 
 Wiki data also includes a large number of columns, the useful and well populated ones where kept and are listed in figure 5 below.
 
-![5_ETL_clean_wiki_movies_wiki_movies_column_list.png](C:/Users/Greg/Carleton/Movies-ETL/Resources/5_ETL_clean_wiki_movies_wiki_movies_column_list.png "Figure 5  - Wiki Movies Column List")
+![/Resources/5_ETL_clean_wiki_movies_wiki_movies_column_list.png](C:/Users/Greg/Carleton/Movies-ETL/Resources/5_ETL_clean_wiki_movies_wiki_movies_column_list.png "Figure 5  - Wiki Movies Column List")
 
 ***Figure 5  - Wiki Movies Column List***
 
